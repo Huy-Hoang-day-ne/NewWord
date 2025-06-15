@@ -44,9 +44,10 @@
       <mat-card-header>
         <div class="chart-header">
           <div>
-            <mat-card-title>Number of Users</mat-card-title>
-            <p class="big-number">{{ totalUsers }}</p>
-            <p class="subtitle">{{ totalOrders }} Orders</p>
+<!--            <mat-card-title>Number of Users</mat-card-title>-->
+            <mat-card-title>Number of Events</mat-card-title>
+<!--            <p class="big-number">{{ totalUsers }}</p>-->
+            <p class="big-number">{{ totalEvents }}</p>
           </div>
 
           <mat-form-field appearance="outline">
@@ -60,10 +61,18 @@
       </mat-card-header>
 
       <mat-card-content>
+<!--        <app-bar-chart-->
+<!--          [chartData]="userChartData"-->
+<!--          [chartLabels]="userChartLabels"-->
+<!--          [chartTitle]="'Events Created Over Time'"-->
+<!--        ></app-bar-chart>-->
         <app-bar-chart
-          [chartData]="userChartData"
-          [labels]="userChartLabels">
-        </app-bar-chart>
+          [chartData]="eventChartData"
+          [chartLabels]="eventChartLabels"
+          [chartTitle]="'Events Created Over Time'"
+        ></app-bar-chart>
+
+
       </mat-card-content>
     </mat-card>
 
